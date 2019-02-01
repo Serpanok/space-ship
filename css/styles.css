@@ -11,7 +11,8 @@ body
 	overflow: hidden;
 }
 
-* {
+*
+{
 	-ms-user-select: none;
 	-moz-user-select: none;
 	-khtml-user-select: none;
@@ -26,11 +27,17 @@ h1
 	cursor: default;
 }
 
-h3
+h2, h3, h4
 {
-	font-size: 30px;
 	margin: 0;
-	/*border-bottom: 5px dashed #FFF;*/
+	padding: 0;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	margin-top: 20px;
+	font-size: 26px;
 }
 
 a
@@ -56,6 +63,10 @@ a
 					#269cd9 1px -1px;
 	
 	z-index: 1001;
+}
+#info h1
+{
+	height: 80px;
 }
 
 #loading
@@ -106,8 +117,6 @@ a
 	height: 100%;
 	
 	z-index: 1000;
-	
-	/*background: url(../images/space-ship.png) no-repeat bottom center;*/
 }
 
 .cloud {
@@ -163,25 +172,17 @@ a
 	right: 300px;
 }
 
-/*#rotate
-{
-	display: none;
+.glitch {
+	position: relative;
 }
-@media all and (orientation:landscape) {
-    #rotate
-	{
-		display: block;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: #269cd9;
-		color: white;
-		text-align: center;
-		vertical-align: middle;
-		font-size: 50px;
-		
-		z-index: 1010;
-	}
-}*/
+.glitch .layer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+}
+.glitch .display {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
